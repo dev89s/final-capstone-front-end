@@ -7,9 +7,11 @@ const AddRoom = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
+  const [error, setError] = useState(false);
 
   const handleAdd = (e) => {
     e.preventDefault();
+    setError(false);
     if (name !== '' && description !== '' && price !== '') {
       axios
         .post('http://localhost:3000/api/v1/rooms', {
@@ -21,14 +23,15 @@ const AddRoom = () => {
           },
         })
         .then((response) => {
-          setName('');
-          setDescription('');
-          setPrice('');
-          console.log(response);
+          if (response.data.message.match(/success/)) {
+            setName('');
+            setDescription('');
+            setPrice('');
+          }
         })
-        .catch((err) => console.log(err));
+        .catch((err) => err && setError(true));
     } else {
-      console.log('error');
+      setError(true);
     }
   };
 
@@ -59,6 +62,7 @@ const AddRoom = () => {
           placeholder="Price"
           required
         />
+        {error && <span className="error">Please fix the error</span>}
 
         <button type="submit">Add Room</button>
       </form>
