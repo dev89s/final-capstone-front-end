@@ -1,29 +1,41 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 
+import './AddRoom.css';
+
 const AddRoom = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState('');
 
   const handleAdd = (e) => {
     e.preventDefault();
-    axios
-      .post('http://localhost:3000/api/v1/rooms', {
-        room: {
-          name,
-          description,
-          price,
-          user_id: 1,
-        },
-      })
-      .then((response) => console.log(response))
-      .catch((err) => console.log(err));
+    if (name !== '' && description !== '' && price !== '') {
+      axios
+        .post('http://localhost:3000/api/v1/rooms', {
+          room: {
+            name,
+            description,
+            price,
+            user_id: 1,
+          },
+        })
+        .then((response) => {
+          setName('');
+          setDescription('');
+          setPrice('');
+          console.log(response);
+        })
+        .catch((err) => console.log(err));
+    } else {
+      console.log('error');
+    }
   };
 
   return (
-    <div>
-      <form>
+    <div className="form-container">
+      <form onSubmit={handleAdd} className="room-form">
+        <h1> New Room</h1>
         <input
           type="text"
           value={name}
@@ -48,9 +60,7 @@ const AddRoom = () => {
           required
         />
 
-        <button type="submit" onClick={(e) => handleAdd(e)}>
-          Add Room
-        </button>
+        <button type="submit">Add Room</button>
       </form>
     </div>
   );
