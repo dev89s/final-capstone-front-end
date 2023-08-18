@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import './AddRoom.css';
 
@@ -8,6 +9,8 @@ const AddRoom = () => {
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
   const [error, setError] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleAdd = (e) => {
     e.preventDefault();
@@ -23,11 +26,11 @@ const AddRoom = () => {
           },
         })
         .then((response) => {
-          console.log(response);
           if (response.status === 201) {
             setName('');
             setDescription('');
             setPrice('');
+            navigate('/');
           }
         })
         .catch((err) => err && setError(true));
