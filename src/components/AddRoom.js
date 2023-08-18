@@ -23,7 +23,8 @@ const AddRoom = () => {
           },
         })
         .then((response) => {
-          if (response.data.message.match(/success/)) {
+          console.log(response);
+          if (response.status === 201) {
             setName('');
             setDescription('');
             setPrice('');
