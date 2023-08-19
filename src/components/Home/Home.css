@@ -1,4 +1,24 @@
+/* Home.css */
 .homepage {
-    text-align: center;
+  display: flex;
+  overflow-x: auto;
+  padding: 16px;
+}
+
+.item {
+  flex: 0 0 auto;
+  margin-right: 16px;
+}
+
+/* Adjust the layout for small screens */
+@media (max-width: 768px) {
+  .homepage {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
-  
+
+  .item {
+    margin-right: 8px;
+  }
+}
