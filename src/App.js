@@ -6,7 +6,7 @@ import NavBar from './components/NavBar';
 import Reserve from './components/Reserve';
 import MyReservations from './components/MyReservations';
 import DeleteRoom from './components/DeleteRoom';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 
 function App() {
   return (
