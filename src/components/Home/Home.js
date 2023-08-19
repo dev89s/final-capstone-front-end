@@ -1,20 +1,24 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux'; // Import useDispatch and useSelector
 import axios from 'axios';
-import PropTypes from 'prop-types';
 import './Home.css';
-import { setData } from './actions'; // Create this action to set data in Redux
+import { setData } from './actions';
 
-const Home = ({ data, setData }) => {
+const Home = () => {
+  const dispatch = useDispatch(); // Get the dispatch function
+
   useEffect(() => {
     axios.get('http://localhost:3000/api/v1/rooms')
       .then((response) => {
-        setData(response.data);
+        console.log('data:', response.data);
+        dispatch(setData(response.data)); // Dispatch the action using the dispatch function
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
-  }, [setData]);
+  }, [dispatch]);
+
+  const data = useSelector((state) => state.data); // Use useSelector to get data from the store
 
   return (
     <div className="homepage">
@@ -28,17 +32,4 @@ const Home = ({ data, setData }) => {
   );
 };
 
-Home.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object).isRequired,
-  setData: PropTypes.func.isRequired,
-};
-
-const mapStateToProps = (state) => ({
-  data: state.data, // Assuming you have a reducer named 'data' in your Redux store
-});
-
-const mapDispatchToProps = {
-  setData, // Action creator to set data in Redux
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default Home;
