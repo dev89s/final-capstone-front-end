@@ -58,12 +58,14 @@
     background-color: white;
     opacity: 0.8;
   }
+
   .mobile {
     position: fixed;
     top: 2rem;
     left: 2rem;
     display: inline;
   }
+
   .open {
     display: none;
   }
@@ -71,6 +73,7 @@
   .ham-menu {
     float: right;
   }
+
   .close-btn {
     position: absolute;
     top: 0;
