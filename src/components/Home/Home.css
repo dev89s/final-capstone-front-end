@@ -1,4 +1,4 @@
-/* Home.css */
+/* Home.css
 .homepage {
   display: flex;
   overflow-x: auto;
@@ -10,7 +10,6 @@
   margin-right: 16px;
 }
 
-/* Adjust the layout for small screens */
 @media (max-width: 768px) {
   .homepage {
     overflow-x: auto;
@@ -21,4 +20,7 @@
   .item {
     margin-right: 8px;
   }
+} */
+.description{
+  font-size: 500;
 }
