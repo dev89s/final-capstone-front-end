@@ -25,7 +25,7 @@ const NavBar = () => {
               <rect y="60" width="100" height="10" />
             </svg>
           ) : (
-            <p>X</p>
+            <p className="close-btn">X</p>
           )}
         </button>
       </div>

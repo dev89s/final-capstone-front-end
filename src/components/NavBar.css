@@ -56,7 +56,7 @@
   .nav {
     position: absolute;
     background-color: white;
-    height: 100vh;
+    opacity: 0.8;
   }
   .mobile {
     position: fixed;
@@ -70,5 +70,13 @@
 
   .ham-menu {
     float: right;
+  }
+  .close-btn {
+    position: absolute;
+    top: 0;
+    left: 8rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: auto;
   }
 }
