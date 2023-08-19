@@ -6,7 +6,7 @@ import { setData } from './actions'; // Create this action to set data in Redux
 
 const Home = ({ data, setData }) => {
   useEffect(() => {
-    axios.get('your_api_endpoint_here')
+    axios.get('http://localhost:3000/api/v1/rooms')
       .then(response => {
         setData(response.data);
       })
@@ -17,9 +17,10 @@ const Home = ({ data, setData }) => {
 
   return (
     <div className="homepage">
-      {data.map(item => (
-        <div className="item" key={item.id}>
-          <img src={item.imageUrl} alt={item.name} />
+      {data.map(room => (
+        <div className="item" key={room.id}>
+          <h1>{room.name}</h1>
+          <img src={room.image} alt={room.name} />
         </div>
       ))}
     </div>
