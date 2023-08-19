@@ -3,7 +3,7 @@ import dataReducer from '../components/Home/reducer';
 
 const store = configureStore({
   reducer: {
-    data: dataReducer
+    data: dataReducer,
   },
 });
 
