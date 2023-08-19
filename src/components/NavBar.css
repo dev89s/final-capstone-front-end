@@ -41,3 +41,34 @@
   text-decoration: none;
   color: black;
 }
+
+.mobile {
+  display: none;
+  z-index: 10;
+}
+
+.ham-menu {
+  background: none;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    position: absolute;
+    background-color: white;
+    height: 100vh;
+  }
+  .mobile {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    display: inline;
+  }
+  .open {
+    display: none;
+  }
+
+  .ham-menu {
+    float: right;
+  }
+}
