@@ -17,19 +17,14 @@ function Login() {
     const login = await fetchLogin(url, { username });
     if (login.message === 'success') {
       setLoginState('logged in successfully');
-      localStorage.setItem('username', username);
-      dispatch(setUsername(username));
-      setTimeout(() => {
-        navigate('/');
-      }, 500);
     } else if (login.message === 'user created') {
       setLoginState('username created');
-      localStorage.setItem('username', username);
-      dispatch(setUsername(username));
-      setTimeout(() => {
-        navigate('/');
-      }, 500);
     }
+    localStorage.setItem('username', username);
+    dispatch(setUsername(username));
+    setTimeout(() => {
+      navigate('/');
+    }, 800);
   };
 
   return (
