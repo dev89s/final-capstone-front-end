@@ -25,3 +25,11 @@ code {
     'Courier New',
     monospace;
 }
+
+.main {
+  display: flex;
+}
+
+.app-body {
+  flex: 1;
+}
