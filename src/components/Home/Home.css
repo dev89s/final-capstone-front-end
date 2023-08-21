@@ -1,22 +1,24 @@
 .homepage {
   overflow-x: hidden;
 }
-
 .room-container {
   display: flex;
+  width: 900px; /* Make sure the container takes full width */
+  flex-wrap: nowrap; /* Prevent items from wrapping */
   overflow: hidden; /* Hide the overflowing rooms */
   transition: transform 0.5s ease; /* For smooth sliding effect */
 }
 
 .room-item {
   flex: 0 0 auto;
+  width: 300px; /* Set the width of each room item */
   margin-right: 16px;
   transition: transform 0.5s ease; /* For smooth sliding effect */
 }
 
 .room-item img{
-  width: 80%;
-  height: 200px;
+  width: 300px;
+  height: 500px;
 }
 
 @media (max-width: 768px) {

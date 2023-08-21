@@ -7,10 +7,11 @@ import Reserve from './components/Reserve';
 import MyReservations from './components/MyReservations';
 import DeleteRoom from './components/DeleteRoom';
 import Home from './components/Home/Home';
+import './App.css'; // Import your custom styles
 
 function App() {
   return (
-    <div className="main">
+    <div className="app">
       <NavBar />
       <div className="app-body">
         <Routes>
