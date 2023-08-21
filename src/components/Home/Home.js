@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './Home.css';
-import { fetchRooms } from './dataSlice'; // Assuming you create a slice named dataSlice
+import { fetchRooms } from './createSlice'; // Assuming you create a slice named dataSlice
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -13,12 +13,14 @@ const Home = () => {
 
   return (
     <div className="homepage">
-      {data.map((room) => (
-        <div className="item" key={room.id}>
-          <h1>{room.name}</h1>
-          <img src={room.image} alt={room.name} />
-        </div>
-      ))}
+      <div className="room-container">
+        {data.map((room) => (
+          <div className="room-item" key={room.id}>
+            <h1>{room.name}</h1>
+            <img src={room.image} alt={room.name} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
