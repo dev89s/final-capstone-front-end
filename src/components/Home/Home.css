@@ -1,4 +1,4 @@
-/* Home.css
+Home.css
 .homepage {
   display: flex;
   overflow-x: auto;
@@ -20,7 +20,4 @@
   .item {
     margin-right: 8px;
   }
-} */
-.description{
-  font-size: 500;
 }
