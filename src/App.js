@@ -11,6 +11,7 @@ import NavBar from './components/NavBar';
 import Reserve from './components/Reserve';
 import MyReservations from './components/MyReservations';
 import DeleteRoom from './components/DeleteRoom';
+import Home from './components/Home/Home';
 
 function App() {
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ function App() {
       <div className="app-body">
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={<div>home page </div>} />
+          <Route path="/" element={<Home />} />
           <Route path="/reserve" element={<Reserve />} />
           <Route path="/my_reservations" element={<MyReservations />} />
           <Route path="/add_room" element={<AddRoom />} />
