@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
 import fetchLogin from './fetchLogin';
 import Accessible from './Accessible';
-import { setUsername } from '../../app/user/userSlice';
+import { setUserInfo } from '../../app/user/userSlice';
 
 function Login() {
   const dispatch = useDispatch();
@@ -17,14 +17,21 @@ function Login() {
     const login = await fetchLogin(url, { username });
     if (login.message === 'success') {
       setLoginState('logged in successfully');
+      const user = JSON.stringify({ id: login.id, username: login.username });
+      localStorage.setItem('username', user);
+      dispatch(setUserInfo({ id: login.id, username: login.username }));
+      setTimeout(() => {
+        navigate('/');
+      }, 800);
     } else if (login.message === 'user created') {
       setLoginState('username created');
+      const user = JSON.stringify({ id: login.id, username: login.username });
+      localStorage.setItem('username', user);
+      dispatch(setUserInfo({ id: login.id, username: login.username }));
+      setTimeout(() => {
+        navigate('/');
+      }, 800);
     }
-    localStorage.setItem('username', username);
-    dispatch(setUsername(username));
-    setTimeout(() => {
-      navigate('/');
-    }, 800);
   };
 
   return (
