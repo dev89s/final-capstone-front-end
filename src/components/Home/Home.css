@@ -1,6 +1,7 @@
 .homepage {
   overflow-x: hidden;
 }
+
 .room-container {
   display: flex;
   width: 900px; /* Make sure the container takes full width */
@@ -16,7 +17,7 @@
   transition: transform 0.5s ease; /* For smooth sliding effect */
 }
 
-.room-item img{
+.room-item img {
   width: 300px;
   height: 500px;
 }
