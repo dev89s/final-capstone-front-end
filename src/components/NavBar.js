@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import './NavBar.css';
 import { Link, useLocation } from 'react-router-dom';
+import './NavBar.css';
 
 const NavBar = () => {
   const params = useLocation();
   const [open, setOpen] = useState(true);
+
+  const logOut = () => {
+    localStorage.removeItem('username');
+  };
 
   useEffect(() => {
     setOpen(true);
@@ -71,6 +75,11 @@ const NavBar = () => {
           >
             <Link className="link" to="/delete_room">
               Delete Room
+            </Link>
+          </li>
+          <li>
+            <Link className="link" onClick={logOut} to="/login">
+              Log Out
             </Link>
           </li>
         </span>
