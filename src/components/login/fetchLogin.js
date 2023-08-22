@@ -8,10 +8,13 @@ async function fetchLogin(url = '', data = {}) {
       },
       body: JSON.stringify(data),
     });
-    const json = response.json();
-    return json;
+    if (response.status !== 404) {
+      const json = response.json();
+      return json;
+    }
+    return { message: 'Not found' };
   } catch (error) {
-    console.error(error);
+    // console.error(error);
     return error;
   }
 }
