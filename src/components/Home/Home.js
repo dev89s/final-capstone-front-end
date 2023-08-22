@@ -14,19 +14,17 @@ const Home = () => {
 
   const scrollContainerRef = useRef(null);
 
-  const slideRight = () => {
+  const handleRightScroll = () => {
     if (scrollContainerRef.current) {
-      const roomWidth = scrollContainerRef.current.querySelector('.room-item').offsetWidth;
-      const currentTransform = scrollContainerRef.current.style.transform;
-      const currentTranslateX = parseInt(currentTransform.replace('translateX(', '').replace('px)', ''), 10);
-      const newTranslateX = currentTranslateX - roomWidth * 3;
-      scrollContainerRef.current.style.transform = `translateX(${newTranslateX}px)`;
+      const container = scrollContainerRef.current;
+      container.scrollBy({ left: 300, behavior: 'smooth' });
     }
   };
 
-  const slideLeft = () => {
+  const handleLeftScroll = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.style.transform = 'translateX(0)';
+      const container = scrollContainerRef.current;
+      container.scrollBy({ left: -300, behavior: 'smooth' });
     }
   };
 
@@ -38,7 +36,7 @@ const Home = () => {
       </div>
       <div className="homepage">
         <div className="room-control1">
-          <button type="button" onClick={slideLeft}>Slide Left</button>
+          <button type="button" onClick={handleLeftScroll}>Slide Left</button>
         </div>
         <div className="room-container" ref={scrollContainerRef}>
           {data.map((room) => (
@@ -50,7 +48,7 @@ const Home = () => {
           ))}
         </div>
         <div className="room-control2">
-          <button type="button" onClick={slideRight}>Slide Right</button>
+          <button type="button" onClick={handleRightScroll}>Slide Right</button>
         </div>
       </div>
     </>
