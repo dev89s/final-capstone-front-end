@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './Home.css';
+import { Link } from 'react-router-dom';
 import { fetchRooms } from './createSlice';
 
 const Home = () => {
@@ -41,11 +42,11 @@ const Home = () => {
         </div>
         <div className="room-container" ref={scrollContainerRef}>
           {data.map((room) => (
-            <div className="room-item" key={room.id}>
+            <Link to={`/detail/${room.id}`} key={room.id} className="room-item">
               <img src={room.image} alt={room.name} />
               <h1>{room.name}</h1>
               <p>{room.description}</p>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="room-control2">
