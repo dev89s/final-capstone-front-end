@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './AddRoom.css';
+import { useSelector } from 'react-redux';
 
 const AddRoom = () => {
+  const user = useSelector((store) => store.user.userInfo);
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
@@ -22,7 +24,7 @@ const AddRoom = () => {
             name,
             description,
             price,
-            user_id: 1,
+            user_id: user.id,
           },
         })
         .then((response) => {
