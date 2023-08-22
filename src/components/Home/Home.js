@@ -30,20 +30,29 @@ const Home = () => {
   };
 
   return (
-    <div className="homepage">
-      <div className="room-controls">
-        <button type="button" onClick={slideLeft}>Slide Left</button>
-        <button type="button" onClick={slideRight}>Slide Right</button>
+    <>
+      <div className="select">
+        <h1>LATEST ROOMS</h1>
+        <p>Please select a room</p>
       </div>
-      <div className="room-container" ref={scrollContainerRef}>
-        {data.map((room) => (
-          <div className="room-item" key={room.id}>
-            <h1>{room.name}</h1>
-            <img src={room.image} alt={room.name} />
-          </div>
-        ))}
+      <div className="homepage">
+        <div className="room-control1">
+          <button type="button" onClick={slideLeft}>Slide Left</button>
+        </div>
+        <div className="room-container" ref={scrollContainerRef}>
+          {data.map((room) => (
+            <div className="room-item" key={room.id}>
+              <img src={room.image} alt={room.name} />
+              <h1>{room.name}</h1>
+              <p>{room.description}</p>
+            </div>
+          ))}
+        </div>
+        <div className="room-control2">
+          <button type="button" onClick={slideRight}>Slide Right</button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

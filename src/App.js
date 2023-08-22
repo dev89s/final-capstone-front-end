@@ -12,6 +12,7 @@ import Reserve from './components/Reserve';
 import MyReservations from './components/MyReservations';
 import DeleteRoom from './components/DeleteRoom';
 import Home from './components/Home/Home';
+import Detail from './components/Home/Details';
 
 function App() {
   const navigate = useNavigate();
@@ -47,6 +48,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
+          <Route path="/Detail" element={<Detail />} />
           <Route path="/reserve" element={<Reserve />} />
           <Route path="/my_reservations" element={<MyReservations />} />
           <Route path="/add_room" element={<AddRoom />} />
