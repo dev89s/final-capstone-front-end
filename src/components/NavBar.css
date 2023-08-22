@@ -28,6 +28,7 @@
   display: flex;
   gap: 0.5rem;
   list-style: none;
+  padding: 0;
 }
 
 .active {
@@ -50,6 +51,17 @@
 .ham-menu {
   background: none;
   border: none;
+}
+
+.social-logo {
+  height: 2rem;
+  width: 2rem;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: bold;
 }
 
 @media (max-width: 600px) {
