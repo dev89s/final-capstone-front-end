@@ -1,11 +1,55 @@
+.form-container {
+  background-color: lightgray;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-title {
+  align-self: self-start;
+  padding-left: 3rem;
+}
+
 .room-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  background-color: white;
+  width: 60%;
+  height: fit-content;
+  padding-bottom: 2rem;
+  border-radius: 0 4rem 4rem 0;
+  border-right: solid 5rem yellowgreen;
 }
 
 .error {
   color: red;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 80%;
+}
+
+.form-label > input {
+  background-color: rgb(213, 208, 208);
+  padding: 1rem;
+  border: none;
+  width: 90%;
+  border-radius: 0.7rem;
+}
+
+.form-submit {
+  background-color: greenyellow;
+  border: none;
+  padding: 1rem;
+  width: 60%;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0.7rem;
 }
