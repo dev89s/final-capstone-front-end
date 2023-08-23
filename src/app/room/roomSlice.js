@@ -40,9 +40,6 @@ const userSlice = createSlice({
       state.error = action.payload;
       console.error(action.payload);
     });
-    build.addCase(fetchDeleteRoom.pending, (state) => {
-      state.isLoading = true;
-    });
     build.addCase(fetchDeleteRoom.fulfilled, (state, action) => {
       state.isLoading = false;
       if ('message' in action.payload && action.payload.message === 'room not found') {
