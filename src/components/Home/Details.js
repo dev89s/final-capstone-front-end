@@ -10,6 +10,7 @@ const Detail = () => {
   const data = useSelector((state) => state.dataSlice.data);
 
   const room = data.find((room) => room.id === p);
+  // a
 
   if (!room) {
     return <div>Room not found.</div>;
