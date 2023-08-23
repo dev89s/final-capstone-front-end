@@ -38,15 +38,17 @@ const DeleteRoom = () => {
     <div className="delete-room-page">
       <ul className="delete-list">
         {rooms.map((room) => (
-          <li className="delete-list-item" key={room.id}>
-            <h4>{room.name}</h4>
-            <p>
-              {room.description.split(' ').slice(0, 20).join(' ')}
-              {room.description.length > 70 ? ('...') : ''}
-            </p>
-            <button type="button" id={room.id} className="delete-btn" onClick={handleDelete}>
-              <img src={trashCan} alt="trash can" width={30} />
-            </button>
+          <li className="delete-list-item" style={{ backgroundImage: `url(${room.image})` }} key={room.id}>
+            <div className="delete-background-tint">
+              <h4 className="delete-room-name">{room.name}</h4>
+              <p className="delete-room-description">
+                {room.description.split(' ').slice(0, 10).join(' ')}
+                {room.description.length > 70 ? ('...') : ''}
+              </p>
+              <button type="button" id={room.id} className="delete-btn" onClick={handleDelete}>
+                <img id={room.id} src={trashCan} alt="trash can" width={30} />
+              </button>
+            </div>
           </li>
         ))}
       </ul>

@@ -6,29 +6,30 @@
 
 .delete-list {
   display: grid;
-  grid-template: "a a a";
-  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
-  align-items: center;
+  grid-auto-rows: 1fr;
   justify-items: center;
+  align-items: center;
   gap: 20px;
   margin: 0;
   padding: 0;
-  padding-block: 1vh;
+  padding-block: 3vh;
+  padding-inline: 5%;
   list-style: none;
-  max-height: 98vh;
+  max-height: 94vh;
   min-height: 689px;
   min-width: 80%;
   overflow-y: auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 890px) {
   .delete-list {
     grid-template: "a a";
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 673px) {
   .delete-list {
     grid-template: "a";
   }
@@ -39,12 +40,44 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 220px;
-  padding: 10px;
-  max-width: 90%;
-  width: 88%;
+  height: 250px;
+  width: 90%;
+  border: 1px solid #70707035;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+}
+
+.delete-background-tint {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   border: 1px solid #70707030;
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 100, 0, 0.3);
+  background-blend-mode: multiply;
+  backdrop-filter: blur(2px);
+  border-radius: 5px;
+  background-size: cover;
+}
+
+.delete-room-name {
+  color: #000;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+.delete-room-description {
+  color: #fff;
+  padding-inline: 10px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-inline: 10px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .delete-btn {
@@ -56,6 +89,7 @@
   border: 1px solid #777;
   border-radius: 5px;
   box-shadow: 1px 1px 5px #777;
+  margin-bottom: 10px;
 }
 
 .delete-btn:hover {
