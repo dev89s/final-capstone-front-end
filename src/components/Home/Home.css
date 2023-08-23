@@ -1,13 +1,50 @@
 .homepage {
   overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 3%;
+  margin-top: 2%;
 }
 
 .room-container {
   display: flex;
-  width: 900px; /* Make sure the container takes full width */
+  width: 932px; /* Make sure the container takes full width */
   flex-wrap: nowrap; /* Prevent items from wrapping */
   overflow: hidden; /* Hide the overflowing rooms */
   transition: transform 0.5s ease; /* For smooth sliding effect */
+}
+
+.select {
+  margin-top: 8%;
+  align-items: center;
+  padding-left: 40%;
+}
+
+.select p {
+  padding-left: 6%;
+}
+
+.room-control2 button {
+  height: 50px;
+  margin-top: 20vh;
+  font-weight: bold;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: greenyellow;
+  border-color: greenyellow;
+  color: white !important;
+}
+
+.room-control1 button {
+  height: 50px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 20vh;
+  font-weight: bold;
+  background: greenyellow;
+  border-color: greenyellow;
+  color: white !important;
 }
 
 .room-item {
@@ -15,15 +52,23 @@
   width: 300px; /* Set the width of each room item */
   margin-right: 16px;
   transition: transform 0.5s ease; /* For smooth sliding effect */
+
+  /* margin: 20vh; */
 }
 
 .room-item img {
-  width: 300px;
-  height: 500px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
 }
 
 @media (max-width: 768px) {
   .room-item {
     margin-right: 0; /* Remove margin for single room on smaller screens */
+  }
+
+  .room-control1,
+  .room-control2 {
+    display: none;
   }
 }
