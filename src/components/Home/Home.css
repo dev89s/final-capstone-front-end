@@ -15,17 +15,17 @@
   transition: transform 0.5s ease; /* For smooth sliding effect */
 }
 
-.select{
+.select {
   margin-top: 8%;
   align-items: center;
   padding-left: 40%;
 }
 
-.select p{
+.select p {
   padding-left: 6%;
 }
 
-.room-control2 button{
+.room-control2 button {
   height: 50px;
   margin-top: 20vh;
   font-weight: bold;
@@ -36,7 +36,7 @@
   color: white !important;
 }
 
-.room-control1 button{
+.room-control1 button {
   height: 50px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -52,6 +52,7 @@
   width: 300px; /* Set the width of each room item */
   margin-right: 16px;
   transition: transform 0.5s ease; /* For smooth sliding effect */
+
   /* margin: 20vh; */
 }
 
@@ -66,7 +67,8 @@
     margin-right: 0; /* Remove margin for single room on smaller screens */
   }
 
-  .room-control1, .room-control2{
+  .room-control1,
+  .room-control2 {
     display: none;
   }
 }

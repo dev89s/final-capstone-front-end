@@ -20,7 +20,9 @@ const Detail = () => {
   return (
     <div>
       <h1>
-        Room Details for Room {roomId}
+        Room Details for Room
+        {' '}
+        {roomId}
       </h1>
       <div>
         <img src={room.image} alt={room.name} />
