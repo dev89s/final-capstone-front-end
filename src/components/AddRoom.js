@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 const AddRoom = () => {
   const user = useSelector((store) => store.user.userInfo);
   const [name, setName] = useState('');
+  const [image, setImage] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
   const [error, setError] = useState(false);
@@ -17,11 +18,12 @@ const AddRoom = () => {
   const handleAdd = (e) => {
     e.preventDefault();
     setError(false);
-    if (name !== '' && description !== '' && price !== '') {
+    if (name !== '' && description !== '' && price !== '' && image !== '') {
       axios
         .post('http://localhost:3000/api/v1/rooms', {
           room: {
             name,
+            image,
             description,
             price,
             user_id: user.id,
@@ -30,6 +32,7 @@ const AddRoom = () => {
         .then((response) => {
           if (response.status === 201) {
             setName('');
+            setImage('');
             setDescription('');
             setPrice('');
             navigate('/');
@@ -52,6 +55,16 @@ const AddRoom = () => {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </label>
+        <label className="form-label" htmlFor="image">
+          Image
+          <input
+            id="image"
+            type="text"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
             required
           />
         </label>
