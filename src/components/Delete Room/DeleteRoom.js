@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRooms, fetchDeleteRoom } from '../../app/room/roomSlice';
 import './DeleteRoom.css';
+import trashCan from './delete-icon.svg';
 
 const DeleteRoom = () => {
   const dispatch = useDispatch();
@@ -39,8 +40,13 @@ const DeleteRoom = () => {
         {rooms.map((room) => (
           <li className="delete-list-item" key={room.id}>
             <h4>{room.name}</h4>
-            <p>{room.description}</p>
-            <button type="button" id={room.id} className="delete" onClick={handleDelete}>DeleteRoom</button>
+            <p>
+              {room.description.split(' ').slice(0, 20).join(' ')}
+              {room.description.length > 70 ? ('...') : ''}
+            </p>
+            <button type="button" id={room.id} className="delete-btn" onClick={handleDelete}>
+              <img src={trashCan} alt="trash can" width={30} />
+            </button>
           </li>
         ))}
       </ul>
