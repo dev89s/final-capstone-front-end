@@ -10,7 +10,7 @@ import AddRoom from './components/AddRoom';
 import NavBar from './components/NavBar';
 import Reserve from './components/Reserve';
 import MyReservations from './components/MyReservations';
-import DeleteRoom from './components/DeleteRoom';
+import DeleteRoom from './components/Delete Room/DeleteRoom';
 import Home from './components/Home/Home';
 import Detail from './components/Home/Details';
 
