@@ -5,6 +5,8 @@ import fetchLogin from './fetchLogin';
 import Accessible from './Accessible';
 import { setUserInfo } from '../../app/user/userSlice';
 
+import './Login.css';
+
 function Login() {
   const dispatch = useDispatch();
   const [username, updateUsername] = useState('');
@@ -36,23 +38,30 @@ function Login() {
 
   return (
     <div className="login-page">
-      <div className="title-container">
-        <h1>Website Name</h1>
+      <div className="background-tint">
+        <div className="login-container">
+          <div className="title-container">
+            <h1 className="title">SummerWave</h1>
+            <h1 className="title">Hotels</h1>
+          </div>
+          <Accessible />
+
+          <form className="login-form" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              className="login-text-field"
+              value={username}
+              onChange={(e) => updateUsername(e.target.value)}
+              placeholder="Username"
+              required
+            />
+            <button className="login-submit" type="submit">Login</button>
+          </form>
+
+          {loginState && <p className="login-state">{loginState}</p>}
+
+        </div>
       </div>
-      <Accessible />
-
-      {loginState && <p style={{ color: 'green' }}>{loginState}</p>}
-
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => updateUsername(e.target.value)}
-          placeholder="Username"
-          required
-        />
-        <button type="submit">Login</button>
-      </form>
     </div>
   );
 }

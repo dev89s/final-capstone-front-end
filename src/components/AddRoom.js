@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './AddRoom.css';
+import { useSelector } from 'react-redux';
 
 const AddRoom = () => {
+  const user = useSelector((store) => store.user.userInfo);
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
@@ -22,7 +24,7 @@ const AddRoom = () => {
             name,
             description,
             price,
-            user_id: 1,
+            user_id: user.id,
           },
         })
         .then((response) => {
@@ -42,33 +44,40 @@ const AddRoom = () => {
   return (
     <div className="form-container">
       <form onSubmit={handleAdd} className="room-form">
-        <h1> New Room</h1>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Name"
-          required
-        />
-
-        <input
-          type="text"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          placeholder="Description"
-          required
-        />
-
-        <input
-          type="number"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-          placeholder="Price"
-          required
-        />
+        <h1 className="form-title"> New Room</h1>
+        <label className="form-label" htmlFor="name">
+          Name
+          <input
+            id="name"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </label>
+        <label className="form-label" htmlFor="name">
+          Description
+          <input
+            type="text"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            required
+          />
+        </label>
+        <label className="form-label" htmlFor="name">
+          Price
+          <input
+            type="number"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            required
+          />
+        </label>
         {error && <span className="error">Please fix the error</span>}
 
-        <button type="submit">Add Room</button>
+        <button type="submit" className="form-submit">
+          Add Room
+        </button>
       </form>
     </div>
   );

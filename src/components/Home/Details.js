@@ -21,6 +21,7 @@ const Detail = () => {
     <div>
       <h1>
         Room Details for Room
+        {' '}
         {roomId}
       </h1>
       <div>

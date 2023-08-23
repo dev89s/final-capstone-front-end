@@ -85,10 +85,42 @@ const NavBar = () => {
         </span>
         <li>
           <ul className="social">
-            <li>X</li>
-            <li>F</li>
-            <li>I</li>
+            <li>
+              <Link to="/#">
+                <img className="social-logo" src="/images/x.webp" alt="x" />
+              </Link>
+            </li>
+            <li>
+              <Link to="/#">
+                <img
+                  className="social-logo"
+                  src="/images/facebook.webp"
+                  alt="facebook"
+                />
+              </Link>
+            </li>
+            <li>
+              <Link to="/#">
+                <img
+                  className="social-logo"
+                  src="/images/instagram.webp"
+                  alt="instagram"
+                />
+              </Link>
+            </li>
+            <li>
+              <Link to="/#">
+                <img
+                  className="social-logo"
+                  src="/images/pintrest.png"
+                  alt="pintrest"
+                />
+              </Link>
+            </li>
           </ul>
+        </li>
+        <li className="copyright">
+          <p>© Microverse 2023</p>
         </li>
       </ul>
     </>

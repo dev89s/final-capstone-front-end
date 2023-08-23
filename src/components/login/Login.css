@@ -1,0 +1,102 @@
+.login-page {
+  font-family: Lato, sans-serif, Courier;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('./hotel-background-2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-tint {
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(200, 100, 0, 0.3);
+  background-blend-mode: multiply;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20vh;
+}
+
+.title-container {
+  text-shadow: 5px 5px 3px #3e382840;
+  width: 100%;
+  text-align: center;
+  padding-block: 10%;
+}
+
+.title {
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 3.2em;
+  line-height: 1.3em;
+  padding: 0;
+  margin: 0;
+}
+
+.login-state {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #adff2f;
+  padding: 20px;
+  background-color: #3e382890;
+  border-radius: 30px;
+}
+
+.login-form {
+  display: flex;
+  max-width: 100vw;
+  gap: 3px;
+  margin-top: 5vh;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px #7779;
+}
+
+.login-text-field {
+  display: flex;
+  font-size: 1.3em;
+  border: 1px solid #7777;
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 1px 0 1px #7777;
+}
+
+.login-submit {
+  padding-right: 20px;
+  padding-left: 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3em;
+  color: #000;
+}
+
+.login-submit:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 414px) {
+  .login-form {
+    margin-top: 5vh;
+  }
+
+  .login-text-field {
+    font-size: 1.1em;
+  }
+
+  .login-submit {
+    font-size: 1.1em;
+  }
+}
