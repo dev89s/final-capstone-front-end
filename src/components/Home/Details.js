@@ -1,17 +1,15 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const Detail = () => {
   const { roomId } = useParams();
   const p = parseInt(roomId, 10);
-  // console.log('roomId:', p + p);
 
   const data = useSelector((state) => state.dataSlice.data);
-  // console.log('data:', data);
 
   const room = data.find((room) => room.id === p);
-  // console.log('room:', room);
 
   if (!room) {
     return <div>Room not found.</div>;
@@ -28,6 +26,7 @@ const Detail = () => {
         <h2>{room.name}</h2>
         <p>{room.description}</p>
         <p>{room.price}</p>
+        <Link to={`/reserve/${room.id}`}>Reserve</Link>
       </div>
     </div>
   );
