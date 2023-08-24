@@ -1,53 +1,53 @@
 .page-container {
-    background-image: linear-gradient(rgba(135, 206, 235, 0.5), rgba(135, 206, 235, 0.5)), url('/public/pexels-sergio-souza-1782151.jpg'); /* Update with your image URL */
-    background-size: cover;
-    background-position: center;
-    min-height: 146vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
+  background-image: linear-gradient(rgba(135, 206, 235, 0.5), rgba(135, 206, 235, 0.5)), url('/public/pexels-sergio-souza-1782151.jpg'); /* Update with your image URL */
+  background-size: cover;
+  background-position: center;
+  min-height: 146vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
-  .heading-container {
-    background-color: rgba(255, 255, 255, 0.8); /* White color with transparency */
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-  }
+.heading-container {
+  background-color: rgba(255, 255, 255, 0.8); /* White color with transparency */
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
 
-  .heading {
-    margin: 0;
-    font-size: 24px;
-  }
+.heading {
+  margin: 0;
+  font-size: 24px;
+}
 
-  .reservations-container {
-    margin: 20px;
-    width: 80%;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.8); /* Adjust the width of the table */
-  }
+.reservations-container {
+  margin: 20px;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.8); /* Adjust the width of the table */
+}
 
-  .reservation-list {
-    width: 100%;
-    border-collapse: collapse;
-  }
+.reservation-list {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-  .reservation-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 10px 0;
-  }
+.reservation-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+}
 
-  .reservation-item td {
-    padding: 10px;
-    background-color: #e1eff1;
-  }
+.reservation-item td {
+  padding: 10px;
+  background-color: #e1eff1;
+}
 
-  .reservation-item th {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    font-weight: bold;
-  }
+.reservation-item th {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  font-weight: bold;
+}
