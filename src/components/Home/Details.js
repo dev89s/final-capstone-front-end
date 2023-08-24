@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 import './Details.css';
 
-
 const Detail = () => {
   const { roomId } = useParams();
   const p = parseInt(roomId, 10);
@@ -13,7 +12,6 @@ const Detail = () => {
   const data = useSelector((state) => state.dataSlice.data);
 
   const room = data.find((room) => room.id === p);
-
 
   if (!room) {
     return <div>Room not found.</div>;
