@@ -19,8 +19,8 @@ const Detail = () => {
 
   const totalPayment = room.price;
   const monthlyPayment = Math.ceil(((room.price * 0.92) / 6) * 100) / 100;
-  const totalDeposit = Math.ceil((room.price * 0.08) * 100) / 100;
-  const totalInsatallmentPayment = Math.ceil(((monthlyPayment * 6) + totalDeposit) * 100) / 100;
+  const totalDeposit = Math.ceil(room.price * 0.08 * 100) / 100;
+  const totalInsatallmentPayment = Math.ceil((monthlyPayment * 6 + totalDeposit) * 100) / 100;
 
   return (
     <>
@@ -69,13 +69,12 @@ const Detail = () => {
           </table>
           <div className="describe-details">
             <p>{room.description}</p>
-            <Link to={`reserve/${room.id}`}>RESERVE</Link>
+            <Link to={`/reserve/${room.id}`}>RESERVE</Link>
           </div>
         </div>
       </div>
       <div className="back-b">
         <Link to="/">Back</Link>
-
       </div>
     </>
   );

@@ -24,7 +24,6 @@
       255,
       0.8
     ); /* White color with transparency */
-
   padding: 10px 0;
   text-align: center;
   width: 100%;
@@ -37,9 +36,13 @@
 
 .reservations-container {
   margin: 20px;
+  display: block;
   width: 80%;
+  overflow-y: scroll;
+  max-height: 75vh;
   background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.8); /* Adjust the width of the table */
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding-bottom: 0.8rem;
 }
 
 .reservation-list {
