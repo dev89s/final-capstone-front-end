@@ -22,43 +22,60 @@ const Detail = () => {
   const totalInsatallmentPayment = Math.ceil(((monthlyPayment * 6) + totalDeposit) * 100) / 100;
 
   return (
-    <div className="details-container">
-    <div>
-      <img src={room.image} alt={room.name} />
-    </div>
-    <div className="total-container">
-      <div className="nam-room">
-        <h2>{room.name}</h2>
-        <p>
-          ${totalDeposit} deposit upon any room booking
-        </p>
-      </div>
-      <table className="details-table">
-        <tbody>
-          <tr>
-            <td>Direct total amount per room:</td>
-            <td>${totalPayment}</td>
-          </tr>
-          <tr>
-            <td>Monthly payment:</td>
-            <td>${monthlyPayment}</td>
-          </tr>
-          <tr>
-            <td>Total installment:</td>
-            <td>${totalInsatallmentPayment}</td>
-          </tr>
-          <tr>
-          <td>Duration:</td>
-              <td>6 Months</td>
-            </tr>
-          </tbody>
-        </table>
-        <div className="describe-details">
-          <p>{room.description}</p>
-          <Link to={`reserve/${room.id}`}>RESERVE</Link>
+    <>
+      <div className="details-container">
+        <div>
+          <img src={room.image} alt={room.name} />
+        </div>
+        <div className="total-container">
+          <div className="nam-room">
+            <h2>{room.name}</h2>
+            <p>
+              $
+              {totalDeposit}
+              {' '}
+              deposit upon any room booking
+            </p>
+          </div>
+          <table className="details-table">
+            <tbody>
+              <tr>
+                <td>Direct total amount per room:</td>
+                <td>
+                  $
+                  {totalPayment}
+                </td>
+              </tr>
+              <tr>
+                <td>Monthly payment:</td>
+                <td>
+                  $
+                  {monthlyPayment}
+                </td>
+              </tr>
+              <tr>
+                <td>Total installment:</td>
+                <td>
+                  $
+                  {totalInsatallmentPayment}
+                </td>
+              </tr>
+              <tr>
+                <td>Duration:</td>
+                <td>6 Months</td>
+              </tr>
+            </tbody>
+          </table>
+          <div className="describe-details">
+            <p>{room.description}</p>
+            <Link to={`reserve/${room.id}`}>RESERVE</Link>
+          </div>
         </div>
       </div>
-    </div>
+      <div className="back-b">
+        <Link to="/">Back</Link>
+      </div>
+    </>
   );
 };
 
