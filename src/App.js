@@ -13,6 +13,7 @@ import MyReservations from './components/MyReservations';
 import DeleteRoom from './components/Delete Room/DeleteRoom';
 import Home from './components/Home/Home';
 import Detail from './components/Home/Details';
+import { getCities } from './app/city/citySlice';
 
 function App() {
   const navigate = useNavigate();
@@ -26,6 +27,7 @@ function App() {
     } else {
       const user = JSON.parse(localStorage.getItem('username'));
       dispatch(setUserInfo(user));
+      dispatch(getCities());
     }
   };
 
