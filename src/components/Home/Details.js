@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import './Details.css';
 
 const Detail = () => {
   const { roomId } = useParams();
@@ -18,7 +19,7 @@ const Detail = () => {
   const totalPayment = room.price;
   const monthlyPayment = Math.ceil(((room.price * 0.92) / 6) * 100) / 100;
   const totalDeposit = Math.ceil((room.price * 0.08) * 100) / 100;
-  const totalInsatallmentPayment = (monthlyPayment * 6) + totalDeposit;
+  const totalInsatallmentPayment = Math.ceil(((monthlyPayment * 6) + totalDeposit) * 100) / 100;
 
   return (
     <div className="details-container">
