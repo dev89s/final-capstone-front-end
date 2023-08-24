@@ -1,70 +1,69 @@
 .details-container {
-    display: flex;
-    flex-direction: row;
-    height: 74vh;
-    width: 83vw;
-    justify-content: space-between;
-    padding: 3vw 3vh;
-  }
-  
-  img {
-    width: 48vw;
-    height: 65vh;
-  }
-  
-  .nam-room {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    width: 25vw;
-    margin-bottom: 2vh;
-  }
-  
-  table.details-table {
-    width: 25vw;
-  }
-  
-  .details-table tr:nth-child(odd) {
-    background-color: #f0f0f0; /* Grey background for odd rows */
-  }
-  
-  .details-table td {
-    padding: 0.5rem;
-    text-align: right;
-  }
-  
-  .describe-details {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3vh;
-    align-items: flex-end;
-    gap: 8vh;
-  }
-  
-  .describe-details a {
-    text-decoration: none;
-    color: white;
-    height: 7vh;
-    width: 9vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
-    border: none;
-    border-radius: 20px;
-  }
+  display: flex;
+  flex-direction: row;
+  height: 74vh;
+  width: 83vw;
+  justify-content: space-between;
+  padding: 3vw 3vh;
+}
 
-  .back-b a{
-    text-decoration: none;
-    color: white;
-    height: 8vh;
-    width: 6vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
-    border: none;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-  
+img {
+  width: 48vw;
+  height: 65vh;
+}
+
+.nam-room {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 25vw;
+  margin-bottom: 2vh;
+}
+
+table.details-table {
+  width: 25vw;
+}
+
+.details-table tr:nth-child(odd) {
+  background-color: #f0f0f0; /* Grey background for odd rows */
+}
+
+.details-table td {
+  padding: 0.5rem;
+  text-align: right;
+}
+
+.describe-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3vh;
+  align-items: flex-end;
+  gap: 8vh;
+}
+
+.describe-details a {
+  text-decoration: none;
+  color: white;
+  height: 7vh;
+  width: 9vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  border: none;
+  border-radius: 20px;
+}
+
+.back-b a {
+  text-decoration: none;
+  color: white;
+  height: 8vh;
+  width: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  border: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
