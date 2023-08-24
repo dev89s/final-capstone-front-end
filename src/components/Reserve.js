@@ -1,14 +1,15 @@
 /* eslint-disable camelcase */
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import './Reserve.css';
 
 const Reserve = () => {
   const { cities } = useSelector((store) => store.cities);
-
+  const { roomId } = useParams();
+  const [isRoom, setIsRoom] = useState(false);
   const [room_id, setRoomId] = useState('');
   const [date, setDate] = useState('');
   const [city_id, setCityId] = useState('');
@@ -16,6 +17,13 @@ const Reserve = () => {
 
   const navigate = useNavigate();
   const user = useSelector((store) => store.user.userInfo);
+  const rooms = useSelector((state) => state.dataSlice.data);
+  useEffect(() => {
+    if (roomId) {
+      setRoomId(roomId);
+      setIsRoom(true);
+    }
+  }, []);
 
   const handleReserve = (e) => {
     e.preventDefault();
@@ -49,6 +57,11 @@ const Reserve = () => {
       {city.name}
     </option>
   ));
+  const renderRooms = () => rooms.map((room) => (
+    <option key={room.id} value={room.id}>
+      {room.name}
+    </option>
+  ));
 
   return (
     <div className="reserve-container">
@@ -57,15 +70,19 @@ const Reserve = () => {
         <form onSubmit={handleReserve} className="reservation-form">
           <h1>Reserve Room</h1>
           <div className="input-row">
-            <div className="input-container-1">
-              <input
-                type="text"
-                value={room_id}
-                onChange={(e) => setRoomId(e.target.value)}
-                placeholder="Room ID"
-                required
-              />
-            </div>
+            {!isRoom && (
+              <div className="input-container-1">
+                <select
+                  type="text"
+                  value={room_id}
+                  onChange={(e) => setRoomId(e.target.value)}
+                  placeholder="Room ID"
+                  required
+                >
+                  {renderRooms()}
+                </select>
+              </div>
+            )}
             <div className="input-container-3">
               <input
                 type="date"
