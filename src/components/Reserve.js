@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import './Reserve.css';
 
 const Reserve = () => {
+  const { cities } = useSelector((store) => store.cities);
+
   const [room_id, setRoomId] = useState('');
   const [date, setDate] = useState('');
   const [city_id, setCityId] = useState('');
@@ -42,6 +44,12 @@ const Reserve = () => {
     }
   };
 
+  const renderCities = () => cities.map((city) => (
+    <option key={city.id} value={city.id}>
+      {city.name}
+    </option>
+  ));
+
   return (
     <div className="reserve-container">
       <div className="background-overlay"> </div>
@@ -68,13 +76,15 @@ const Reserve = () => {
               />
             </div>
             <div className="input-container-2">
-              <input
+              <select
                 type="text"
                 value={city_id}
                 onChange={(e) => setCityId(e.target.value)}
                 placeholder="City ID"
                 required
-              />
+              >
+                {renderCities()}
+              </select>
             </div>
           </div>
 

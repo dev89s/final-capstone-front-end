@@ -25,7 +25,7 @@
   padding: 0;
   border-radius: 20px;
   box-shadow: 8px 0 5px rgba(0, 0, 0, 0.2);
-  width: 419px;
+  width: 50vw;
   z-index: 1;
 }
 
@@ -40,7 +40,6 @@
 }
 
 .input-container-2 {
-  width: 70px;
   margin-right: 20px; /* Adjust the width as needed */
 
   /* Additional styling for input fields */
@@ -59,7 +58,7 @@
 }
 
 .reservation-form {
-  width: 384px;
+  width: 90%;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -71,7 +70,8 @@
   text-align: center;
 }
 
-.reservation-form input {
+.reservation-form input,
+select {
   width: 100%;
   padding: 7px;
   margin-bottom: 15px;
