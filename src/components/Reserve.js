@@ -66,7 +66,7 @@ const Reserve = () => {
   return (
     <div className="reserve-container">
       <div className="background-overlay"> </div>
-      <div className="form-container">
+      <div className="reservation-form-container">
         <form onSubmit={handleReserve} className="reservation-form">
           <h1>Reserve Room</h1>
           <div className="input-row">
@@ -76,9 +76,11 @@ const Reserve = () => {
                   type="text"
                   value={room_id}
                   onChange={(e) => setRoomId(e.target.value)}
-                  placeholder="Room ID"
                   required
                 >
+                  <option disabled value="">
+                    Select Room
+                  </option>
                   {renderRooms()}
                 </select>
               </div>
@@ -100,6 +102,9 @@ const Reserve = () => {
                 placeholder="City ID"
                 required
               >
+                <option disabled value="">
+                  Select City
+                </option>
                 {renderCities()}
               </select>
             </div>
