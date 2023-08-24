@@ -50,6 +50,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/detail/:roomId" element={<Detail />} />
           <Route path="/reserve/:roomId" element={<Reserve />} />
+          <Route path="/reserve" element={<Reserve />} />
           <Route path="/my_reservations" element={<MyReservations />} />
           <Route path="/add_room" element={<AddRoom />} />
           <Route path="/delete_room" element={<DeleteRoom />} />

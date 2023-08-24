@@ -2,7 +2,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+
 import './Details.css';
+
 
 const Detail = () => {
   const { roomId } = useParams();
@@ -11,6 +13,7 @@ const Detail = () => {
   const data = useSelector((state) => state.dataSlice.data);
 
   const room = data.find((room) => room.id === p);
+
 
   if (!room) {
     return <div>Room not found.</div>;
@@ -74,6 +77,7 @@ const Detail = () => {
       </div>
       <div className="back-b">
         <Link to="/">Back</Link>
+
       </div>
     </>
   );
