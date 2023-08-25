@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the Home page 1`] = `
+Array [
+  <div
+    className="select"
+  >
+    <h1>
+      LATEST ROOMS
+    </h1>
+    <p>
+      Please select a room
+    </p>
+  </div>,
+  <div
+    className="homepage"
+  >
+    <div
+      className="room-control1"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Slide Left
+      </button>
+    </div>
+    <div
+      className="room-container"
+    />
+    <div
+      className="room-control2"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Slide Right
+      </button>
+    </div>
+  </div>,
+]
+`;

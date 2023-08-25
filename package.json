@@ -16,6 +16,8 @@
     "react-router": "^6.15.0",
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
+    "react-test-renderer": "^18.2.0",
+    "redux-mock-store": "^1.5.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -26,6 +28,11 @@
     "lint": "npm run lint:js; npm run lint:css;",
     "lint:js": "npx eslint '**/*.{js,jsx}' --fix",
     "lint:css": "npx stylelint '**/*.{css,scss}' --fix"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!axios)/"
+    ]
   },
   "eslintConfig": {
     "extends": [
