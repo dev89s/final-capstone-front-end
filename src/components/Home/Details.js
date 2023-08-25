@@ -25,8 +25,8 @@ const Detail = () => {
   return (
     <>
       <div className="details-container">
-        <div>
-          <img src={room.image} alt={room.name} />
+        <div className="room-deatils-img-container">
+          <img className="room-details-img" src={room.image} alt={room.name} />
         </div>
         <div className="total-container">
           <div className="nam-room">

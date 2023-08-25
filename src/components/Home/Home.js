@@ -7,6 +7,11 @@ import { fetchRooms } from './createSlice';
 const Home = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.dataSlice.data);
+  const rooms = [...data];
+  if (rooms.length > 0) {
+    rooms.sort((a, b) => a.id - b.id);
+  }
+  console.log(rooms);
 
   useEffect(() => {
     dispatch(fetchRooms());
@@ -39,7 +44,7 @@ const Home = () => {
           <button type="button" onClick={handleLeftScroll}>Slide Left</button>
         </div>
         <div className="room-container" ref={scrollContainerRef}>
-          {data.map((room) => (
+          {rooms.filter((room) => room.active).map((room) => (
             <Link to={`/detail/${room.id}`} key={room.id} className="room-item">
               <img src={room.image} alt={room.name} />
               <h1>{room.name}</h1>
