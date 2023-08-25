@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the reserver page should render correctly 1`] = `
+<div
+  className="reserve-container"
+>
+  <div
+    className="background-overlay"
+  >
+     
+  </div>
+  <div
+    className="reservation-form-container"
+  >
+    <form
+      className="reservation-form"
+      onSubmit={[Function]}
+    >
+      <h1>
+        Reserve Room
+      </h1>
+      <div
+        className="input-row"
+      >
+        <div
+          className="input-container-1"
+        >
+          <select
+            onChange={[Function]}
+            required={true}
+            type="text"
+            value=""
+          >
+            <option
+              disabled={true}
+              value=""
+            >
+              Select Room
+            </option>
+          </select>
+        </div>
+        <div
+          className="input-container-3"
+        >
+          <input
+            onChange={[Function]}
+            placeholder="Date"
+            required={true}
+            type="date"
+            value=""
+          />
+        </div>
+        <div
+          className="input-container-2"
+        >
+          <select
+            onChange={[Function]}
+            placeholder="City ID"
+            required={true}
+            type="text"
+            value=""
+          >
+            <option
+              disabled={true}
+              value=""
+            >
+              Select City
+            </option>
+          </select>
+        </div>
+      </div>
+      <button
+        type="submit"
+      >
+        Reserve Room
+      </button>
+    </form>
+  </div>
+</div>
+`;

@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import Login from '../components/login/Login';
 import { Provider } from 'react-redux';
 import store from '../app/store';
-import { BrowserRouter, Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 const Wrapper = () => {
   return (
