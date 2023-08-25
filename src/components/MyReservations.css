@@ -24,7 +24,6 @@
       255,
       0.8
     ); /* White color with transparency */
-
   padding: 10px 0;
   text-align: center;
   width: 100%;
@@ -39,7 +38,7 @@
   margin: 20px;
   display: block;
   width: 80%;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 75vh;
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.8);
