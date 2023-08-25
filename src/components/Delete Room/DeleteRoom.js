@@ -37,7 +37,7 @@ const DeleteRoom = () => {
   return (
     <div className="delete-room-page">
       <ul className="delete-list">
-        {rooms.map((room) => (
+        {rooms.filter((room) => room.active).map((room) => (
           <li className="delete-list-item" style={{ backgroundImage: `url(${room.image})` }} key={room.id}>
             <div className="delete-background-tint">
               <h4 className="delete-room-name">{room.name}</h4>

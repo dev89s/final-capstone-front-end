@@ -57,7 +57,7 @@ const Reserve = () => {
       {city.name}
     </option>
   ));
-  const renderRooms = () => rooms.map((room) => (
+  const renderRooms = () => rooms.filter((room) => room.active).map((room) => (
     <option key={room.id} value={room.id}>
       {room.name}
     </option>
