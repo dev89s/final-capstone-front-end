@@ -11,7 +11,6 @@ const Home = () => {
   if (rooms.length > 0) {
     rooms.sort((a, b) => a.id - b.id);
   }
-  console.log(rooms);
 
   useEffect(() => {
     dispatch(fetchRooms());
