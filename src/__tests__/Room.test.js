@@ -34,7 +34,7 @@ it('should render the Home page', () => {
     .create(
       <Provider store={store}>
         <Home />
-      </Provider>
+      </Provider>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
