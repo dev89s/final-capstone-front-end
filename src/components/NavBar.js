@@ -34,7 +34,9 @@ const NavBar = () => {
         </button>
       </div>
       <ul className={`nav ${open && 'open'}`}>
-        <li className="logo">Logo</li>
+        <li className="logo">
+          <h1>SummerWave</h1>
+        </li>
         <span className="links">
           <li className={`${params.pathname === '/' && 'active'}`}>
             <Link className="link" to="/">
