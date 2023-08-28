@@ -1,4 +1,5 @@
 # SummerWave Hotels (Final Capstone)
+
 <a id="readme-top"></a>
 
 # 📗 Table of Contents
@@ -107,7 +108,7 @@ To run the project, execute the following command:
 
 ### Deployment <a id="triangular_flag_on_post-deployment"></a>
 
-  - [N/A]
+- [N/A]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,6 +120,23 @@ To run the project, execute the following command:
 
 - GitHub: [@dev89s](https://github.com/dev89s)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/sasan-moshirabadi)
+
+👤 **Abel Tsegaye**
+
+- GitHub: [@abeltsew](https://github.com/abeltsew)
+- Twitter: [@abeltsew](https://twitter.com/abeltsew)
+- LinkedIn: [abeltsew](https://linkedin.com/in/abeltsew)
+
+👤 **Ikoote Rasuli**
+
+- GitHub: [@ikoote1](https://github.com/ikoote1)
+- LinkedIn: [Ikoote Rasuli](https://www.linkedin.com/in/ikooterasuli/)
+
+👤 **TayyabKM**
+
+- Github: [@TayyabKM](https://github.com/TayyabKM)
+- Twitter: [@TayyabI83126361](https://twitter.com/TayyabI83126361)
+- Linkedin: [@tayyab-irfan-01b72b1aa](https://www.linkedin.com/in/tayyab-irfan-01b72b1aa/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -153,8 +171,8 @@ If you like this project please show support by staring ⭐️.
 
 ## 🙏 Acknowledgments <a id="acknowledgements"></a>
 
-* We would like to thank my team and my coding partners for their support and guidance.
-* The Design reference for the website belongs to [Murat Korkmaz](https://www.behance.net/muratk). You can find the reference [here](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
+- We would like to thank my team and my coding partners for their support and guidance.
+- The Design reference for the website belongs to [Murat Korkmaz](https://www.behance.net/muratk). You can find the reference [here](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
