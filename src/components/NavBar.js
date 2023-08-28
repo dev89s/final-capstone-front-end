@@ -39,6 +39,10 @@ const NavBar = () => {
             <h2>SummerWave</h2>
             <h2>SummerWave</h2>
           </div>
+          <div className="content">
+            <h2>Hotels</h2>
+            <h2>Hotels</h2>
+          </div>
         </li>
         <span className="links">
           <li className={`${params.pathname === '/' && 'active'}`}>
@@ -47,8 +51,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li
-            className={`${
-              params.pathname.split('/')[1] === 'reserve' && 'active'
+            className={`${params.pathname.split('/')[1] === 'reserve' && 'active'
             }`}
           >
             <Link className="link" to="/reserve">
@@ -56,8 +59,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li
-            className={`${
-              params.pathname.split('/')[1] === 'my_reservations' && 'active'
+            className={`${params.pathname.split('/')[1] === 'my_reservations' && 'active'
             }`}
           >
             <Link className="link" to="/my_reservations">
@@ -65,8 +67,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li
-            className={`${
-              params.pathname.split('/')[1] === 'add_room' && 'active'
+            className={`${params.pathname.split('/')[1] === 'add_room' && 'active'
             }`}
           >
             <Link className="link" to="/add_room">
@@ -74,8 +75,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li
-            className={`${
-              params.pathname.split('/')[1] === 'delete_room' && 'active'
+            className={`${params.pathname.split('/')[1] === 'delete_room' && 'active'
             }`}
           >
             <Link className="link" to="/delete_room">
