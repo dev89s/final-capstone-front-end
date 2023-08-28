@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import { fetchRooms } from './createSlice';
 
 const Home = () => {
+  const [left, setLeft] = useState(0);
   const dispatch = useDispatch();
   const data = useSelector((state) => state.dataSlice.data);
   const rooms = [...data];
@@ -22,6 +23,7 @@ const Home = () => {
     if (scrollContainerRef.current) {
       const container = scrollContainerRef.current;
       container.scrollBy({ left: 300, behavior: 'smooth' });
+      setLeft(container.scrollLeft);
     }
   };
 
@@ -29,6 +31,7 @@ const Home = () => {
     if (scrollContainerRef.current) {
       const container = scrollContainerRef.current;
       container.scrollBy({ left: -300, behavior: 'smooth' });
+      setLeft(container.scrollLeft);
     }
   };
 
@@ -40,19 +43,45 @@ const Home = () => {
       </div>
       <div className="homepage">
         <div className="room-control1">
-          <button type="button" onClick={handleLeftScroll}>Slide Left</button>
+          <button
+            className={`${left === 0 && 'disabledButton'}`}
+            type="button"
+            disabled={left === 0}
+            onClick={handleLeftScroll}
+          >
+            {'<'}
+          </button>
         </div>
         <div className="room-container" ref={scrollContainerRef}>
-          {rooms.filter((room) => room.active).map((room) => (
-            <Link to={`/detail/${room.id}`} key={room.id} className="room-item">
-              <img src={room.image} alt={room.name} />
-              <h1>{room.name}</h1>
-              <p>{room.description}</p>
-            </Link>
-          ))}
+          {rooms
+            .filter((room) => room.active)
+            .map((room) => (
+              <Link
+                to={`/detail/${room.id}`}
+                key={room.id}
+                className="room-item"
+              >
+                <img src={room.image} alt={room.name} />
+                <h1>{room.name}</h1>
+                <p>{room.description}</p>
+              </Link>
+            ))}
         </div>
         <div className="room-control2">
-          <button type="button" onClick={handleRightScroll}>Slide Right</button>
+          <button
+            className={`${
+              scrollContainerRef?.current?.scrollWidth - left
+                === scrollContainerRef?.current?.clientWidth && 'disabledButton'
+            }`}
+            disabled={
+              scrollContainerRef?.current?.scrollWidth - left
+              === scrollContainerRef?.current?.clientWidth
+            }
+            type="button"
+            onClick={handleRightScroll}
+          >
+            {'>'}
+          </button>
         </div>
       </div>
     </>
