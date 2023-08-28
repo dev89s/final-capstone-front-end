@@ -15,6 +15,7 @@ import Home from './components/Home/Home';
 import Detail from './components/Home/Details';
 import { getCities } from './app/city/citySlice';
 import { fetchRooms } from './components/Home/createSlice';
+import backendCheck from './helper/backend-check';
 
 function App() {
   const navigate = useNavigate();
@@ -22,9 +23,15 @@ function App() {
   const location = useLocation();
   const [loginPage, setLoginPage] = useState(false);
 
-  const authenticateUser = () => {
+  const authenticateUser = async () => {
+    const available = await backendCheck();
+    if (!available) {
+      localStorage.removeItem('username');
+    }
     if (!localStorage.getItem('username')) {
-      navigate('/login');
+      if (location.pathname !== './login') {
+        navigate('/login');
+      }
     } else {
       const user = JSON.parse(localStorage.getItem('username'));
       dispatch(fetchRooms());
@@ -43,7 +50,7 @@ function App() {
 
   useEffect(() => {
     authenticateUser();
-  }, []);
+  }, [location.pathname]);
 
   return (
     <div className="main">
