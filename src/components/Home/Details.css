@@ -1,6 +1,7 @@
 .details-container {
   display: flex;
   flex-direction: row;
+  gap: 20px;
   justify-content: space-between;
   padding: 2em 2em;
 }
@@ -9,10 +10,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .room-details-img {
   min-width: 650px;
+  max-width: 850px;
   width: 100%;
 }
 
