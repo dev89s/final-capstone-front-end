@@ -5,9 +5,3 @@ exports[`Should render the My reservervations page should render correctly 1`] =
   Loading...
 </div>
 `;
-
-exports[`Should render the reserver page should render correctly 1`] = `
-<div>
-  Loading...
-</div>
-`;
