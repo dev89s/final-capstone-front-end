@@ -12,6 +12,7 @@
   padding-top: 2rem;
   font-weight: 800;
   background: -webkit-linear-gradient(45deg, greenyellow, red 80%);
+  background-clip: content-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
