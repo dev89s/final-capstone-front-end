@@ -36,12 +36,11 @@ const NavBar = () => {
       <ul className={`nav ${open && 'open'}`}>
         <li className="logo">
           <div className="content">
-            <h2>SummerWave</h2>
-            <h2>SummerWave</h2>
-          </div>
-          <div className="content">
-            <h2>Hotels</h2>
-            <h2>Hotels</h2>
+            <h2>
+              SummerWave
+              <br />
+              Hotels
+            </h2>
           </div>
         </li>
         <span className="links">

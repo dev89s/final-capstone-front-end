@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import './AddRoom.css';
 import { useSelector } from 'react-redux';
+import { API_URL } from '../config/info';
 
 const AddRoom = () => {
   const user = useSelector((store) => store.user.userInfo);
@@ -20,7 +21,7 @@ const AddRoom = () => {
     setError(false);
     if (name !== '' && description !== '' && price !== '' && image !== '') {
       axios
-        .post('http://localhost:3000/api/v1/rooms', {
+        .post(`${API_URL}/api/v1/rooms`, {
           room: {
             name,
             image,

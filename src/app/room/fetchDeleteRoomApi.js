@@ -1,4 +1,6 @@
-async function fetchDeleteRoomApi(id, url = 'http://localhost:3000/api/v1/rooms') {
+import { API_URL } from '../../config/info';
+
+async function fetchDeleteRoomApi(id, url = `${API_URL}/api/v1/rooms`) {
   try {
     const newUrl = `${url}/${id}`;
     const response = await fetch(newUrl, {

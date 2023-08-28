@@ -7,74 +7,25 @@
   padding: 2rem 2rem 0 2rem;
 }
 
-.logo h1 {
-  font-size: 1.5rem;
-  padding-top: 2rem;
-  font-weight: 800;
-  background: -webkit-linear-gradient(45deg, greenyellow, red 80%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .content {
   display: flex;
   justify-content: center;
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-left: 0.4rem;
   width: 100%;
-  padding-top: 2rem;
-  position: relative;
 }
 
 .content h2 {
-  position: absolute;
-  font-weight: 800;
-  font-size: 1.7em;
-}
-
-.content h2:nth-child(1) {
-  color: transparent;
-  -webkit-text-stroke: 2px #0000002b;
-}
-
-.content h2:nth-child(2) {
-  color: rgb(220, 130, 27);
-  animation: animate 2s ease-in-out infinite;
-}
-
-@keyframes animate {
-  0%,
-  100% {
-    clip-path:
-      polygon(
-        0% 45%,
-        15% 44%,
-        32% 50%,
-        54% 60%,
-        70% 61%,
-        84% 59%,
-        100% 52%,
-        100% 100%,
-        0% 100%
-      );
-  }
-
-  50% {
-    clip-path:
-      polygon(
-        0 60%,
-        16% 65%,
-        34% 66%,
-        51% 62%,
-        67% 50%,
-        84% 45%,
-        100% 40%,
-        100% 100%,
-        0% 100%
-      );
-  }
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  font-size: 2.3em;
+  color: #e2c12b;
+  text-shadow: 1px 1px #000a;
 }
 
 .links {
-  padding-top: 10rem;
+  padding-top: 1.8rem;
   flex: 1;
   display: flex;
   flex-direction: column;

@@ -19,10 +19,12 @@ Array [
       className="room-control1"
     >
       <button
+        className="disabledButton"
+        disabled={true}
         onClick={[Function]}
         type="button"
       >
-        Slide Left
+        &lt;
       </button>
     </div>
     <div
@@ -32,10 +34,12 @@ Array [
       className="room-control2"
     >
       <button
+        className="false"
+        disabled={false}
         onClick={[Function]}
         type="button"
       >
-        Slide Right
+        &gt;
       </button>
     </div>
   </div>,

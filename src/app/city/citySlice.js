@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { API_URL } from '../../config/info';
 
 const initialState = {
   cities: [],
@@ -7,7 +8,7 @@ const initialState = {
   errorCities: undefined,
 };
 
-const URL = 'http://localhost:3000/api/v1/cities';
+const URL = `${API_URL}/api/v1/cities`;
 
 export const getCities = createAsyncThunk('cities/get', async () => {
   const cities = await axios.get(URL);

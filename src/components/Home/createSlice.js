@@ -1,9 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { API_URL } from '../../config/info';
 
 // Create an asynchronous thunk to fetch rooms data
 export const fetchRooms = createAsyncThunk('data/fetchRooms', async () => {
-  const response = await axios.get('http://localhost:3000/api/v1/rooms');
+  const response = await axios.get(`${API_URL}/api/v1/rooms`);
   return response.data;
 });
 

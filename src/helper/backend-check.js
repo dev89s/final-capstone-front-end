@@ -1,3 +1,5 @@
+import { API_URL } from '../config/info';
+
 async function fetchLogin(url = '', data = {}) {
   try {
     const response = await fetch(url, {
@@ -20,7 +22,7 @@ async function fetchLogin(url = '', data = {}) {
 }
 
 const backendCheck = async () => {
-  const url = 'http://localhost:3000/api/v1/users/start';
+  const url = `${API_URL}/api/v1/users/start`;
   const available = await fetchLogin(url, { message: 'start' });
   if (available.message === 'welcome') {
     return true;

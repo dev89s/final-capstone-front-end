@@ -1,4 +1,6 @@
-async function fetchRoomsApi(url = 'http://localhost:3000/api/v1/rooms') {
+import { API_URL } from '../../config/info';
+
+async function fetchRoomsApi(url = `${API_URL}/api/v1/rooms`) {
   try {
     const response = await fetch(url, {
       method: 'GET',
