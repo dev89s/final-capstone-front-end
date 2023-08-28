@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import './Reserve.css';
+import { API_URL } from '../config/info';
 
 const Reserve = () => {
   const { cities } = useSelector((store) => store.cities);
@@ -30,7 +31,7 @@ const Reserve = () => {
     setError(false);
     if (room_id !== '' && date !== '' && city_id !== '') {
       axios
-        .post('http://localhost:3000/api/v1/reservations', {
+        .post(`${API_URL}/api/v1/reservations`, {
           reservation: {
             room_id,
             date,
@@ -57,11 +58,13 @@ const Reserve = () => {
       {city.name}
     </option>
   ));
-  const renderRooms = () => rooms.filter((room) => room.active).map((room) => (
-    <option key={room.id} value={room.id}>
-      {room.name}
-    </option>
-  ));
+  const renderRooms = () => rooms
+    .filter((room) => room.active)
+    .map((room) => (
+      <option key={room.id} value={room.id}>
+        {room.name}
+      </option>
+    ));
 
   return (
     <div className="reserve-container">

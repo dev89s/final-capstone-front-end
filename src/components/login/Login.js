@@ -6,6 +6,7 @@ import Accessible from './Accessible';
 import { setUserInfo } from '../../app/user/userSlice';
 
 import './Login.css';
+import { API_URL } from '../../config/info';
 
 function Login() {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = 'http://localhost:3000/api/v1/users/new_session';
+    const url = `${API_URL}/api/v1/users/new_session`;
     const login = await fetchLogin(url, { username });
     if (login.message === 'success') {
       setLoginState('logged in successfully');
@@ -55,11 +56,12 @@ function Login() {
               placeholder="Username"
               required
             />
-            <button className="login-submit" type="submit">Login</button>
+            <button className="login-submit" type="submit">
+              Login
+            </button>
           </form>
 
           {loginState && <p className="login-state">{loginState}</p>}
-
         </div>
       </div>
     </div>
