@@ -52,3 +52,11 @@
   cursor: pointer;
   border-radius: 0.7rem;
 }
+
+@media (max-width: 600px) {
+  .room-form {
+    border-right: solid 1rem yellowgreen;
+    width: 90%;
+    margin-top: 20%;
+  }
+}
