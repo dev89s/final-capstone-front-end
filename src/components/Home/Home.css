@@ -60,9 +60,9 @@
   flex: 0 0 auto;
   align-items: center;
   text-align: center;
-  width: 300px; /* Set the width of each room item */
+  width: 300px;
   margin-right: 16px;
-  transition: transform 0.5s ease; /* For smooth sliding effect */
+  transition: transform 0.5s ease; 
   text-decoration: none;
 }
 .room-item h1{
