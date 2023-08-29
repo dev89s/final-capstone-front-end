@@ -81,6 +81,8 @@ In order to run this project you need:
 - Install Redux
 - Install Redux toolkit
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Setup
 
 Clone this repository to your desired folder:
@@ -88,6 +90,7 @@ Clone this repository to your desired folder:
 ```
   git clone https://github.com/dev89s/final-capstone-front-end.git
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Install
 
@@ -97,6 +100,7 @@ Install this project with:
   cd final-capstone-front-end
   npm install
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Usage
 
@@ -105,12 +109,22 @@ To run the project, execute the following command:
 ```
   npm start
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Deployment <a id="triangular_flag_on_post-deployment"></a>
+### Run Tests <a id="run-tests"></a>
+
+To run the tests, execute the following command:
+```
+  npm test
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ### Deployment <a id="triangular_flag_on_post-deployment"></a>
 
 - [N/A]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- AUTHORS -->
 
