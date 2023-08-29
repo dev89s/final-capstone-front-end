@@ -30,7 +30,7 @@ const MyReservations = () => {
   }, [dispatch, userInfo.id]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <h2 className="loading-text">Loading...</h2>;
   }
 
   if (error) {

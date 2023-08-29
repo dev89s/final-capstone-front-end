@@ -23,7 +23,9 @@ const DeleteRoom = () => {
   }, [dispatch]);
 
   if (isLoading) {
-    return (<h2>Room list is loading...</h2>);
+    return (
+      <h2 className="loading-text">Room list is loading...</h2>
+    );
   }
 
   if (error) {

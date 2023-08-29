@@ -8,6 +8,7 @@ const Home = () => {
   const [left, setLeft] = useState(0);
   const dispatch = useDispatch();
   const data = useSelector((state) => state.dataSlice.data);
+  const status = useSelector((state) => state.dataSlice.status);
   const rooms = [...data];
   if (rooms.length > 0) {
     rooms.sort((a, b) => a.id - b.id);
@@ -34,6 +35,12 @@ const Home = () => {
       setLeft(container.scrollLeft);
     }
   };
+
+  if (status === 'loading') {
+    return (
+      <h2 className="loading-text">Loading...</h2>
+    );
+  }
 
   return (
     <>
@@ -69,9 +76,8 @@ const Home = () => {
         </div>
         <div className="room-control2">
           <button
-            className={`${
-              scrollContainerRef?.current?.scrollWidth - left
-                === scrollContainerRef?.current?.clientWidth && 'disabledButton'
+            className={`${scrollContainerRef?.current?.scrollWidth - left
+              === scrollContainerRef?.current?.clientWidth && 'disabledButton'
             }`}
             disabled={
               scrollContainerRef?.current?.scrollWidth - left
