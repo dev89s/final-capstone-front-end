@@ -43,24 +43,28 @@ const MyReservations = () => {
         <h2 className="heading">My Reservations</h2>
       </div>
       <div className="reservations-container">
-        <table className="reservation-list">
-          <thead>
-            <tr>
-              <th>Room</th>
-              <th>Date</th>
-              <th>City</th>
-            </tr>
-          </thead>
-          <tbody>
-            {reservations.map((reservation) => (
-              <tr key={reservation.id} className="reservation-item">
-                <td>{reservation.room}</td>
-                <td>{reservation.date}</td>
-                <td>{reservation.city}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        {(reservations.length !== 0)
+          && (
+            <table className="reservation-list">
+              <thead>
+                <tr>
+                  <th>Room</th>
+                  <th>Date</th>
+                  <th>City</th>
+                </tr>
+              </thead>
+              <tbody>
+                {reservations.map((reservation) => (
+                  <tr key={reservation.id} className="reservation-item">
+                    <td>{reservation.room}</td>
+                    <td>{reservation.date}</td>
+                    <td>{reservation.city}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        {(reservations.length === 0 && <h2 className="no-reservation">No Reservations</h2>)}
       </div>
     </div>
   );

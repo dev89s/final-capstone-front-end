@@ -4,11 +4,13 @@
       rgba(135, 206, 235, 0.5),
       rgba(135, 206, 235, 0.5)
     ),
-    url('/public/pexels-sergio-souza-1782151.jpg'); /* Update with your image URL */
+    url('/public/pexels-sergio-souza-1782151.jpg');
+
+  /* Update with your image URL */
 
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: calc(100vh - 4rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +25,9 @@
       255,
       255,
       0.8
-    ); /* White color with transparency */
+    );
+
+  /* White color with transparency */
 
   padding: 10px 0;
   text-align: center;
@@ -51,6 +55,14 @@
   border-collapse: collapse;
 }
 
+.no-reservation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.8rem;
+  height: 5vh;
+}
+
 .reservation-item {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #ccc;
@@ -68,4 +80,10 @@
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .heading-container {
+    margin-top: 3.5rem;
+  }
 }
