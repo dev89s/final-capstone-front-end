@@ -23,7 +23,7 @@ const Home = () => {
   const handleRightScroll = () => {
     if (scrollContainerRef.current) {
       const container = scrollContainerRef.current;
-      container.scrollBy({ left: 300, behavior: 'smooth' });
+      container.scrollBy({ left: 316, behavior: 'smooth' });
       setLeft(container.scrollLeft);
     }
   };
@@ -31,7 +31,7 @@ const Home = () => {
   const handleLeftScroll = () => {
     if (scrollContainerRef.current) {
       const container = scrollContainerRef.current;
-      container.scrollBy({ left: -300, behavior: 'smooth' });
+      container.scrollBy({ left: -316, behavior: 'smooth' });
       setLeft(container.scrollLeft);
     }
   };
