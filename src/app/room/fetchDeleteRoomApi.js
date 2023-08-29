@@ -1,6 +1,6 @@
 import { API_URL } from '../../config/info';
 
-async function fetchDeleteRoomApi(id, url = `${API_URL}/api/v1/rooms`) {
+const fetchDeleteRoomApi = async (id, url = `${API_URL}/api/v1/rooms`) => {
   try {
     const newUrl = `${url}/${id}`;
     const response = await fetch(newUrl, {
@@ -13,6 +13,6 @@ async function fetchDeleteRoomApi(id, url = `${API_URL}/api/v1/rooms`) {
     console.error(error);
     return error;
   }
-}
+};
 
 export default fetchDeleteRoomApi;

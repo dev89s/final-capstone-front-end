@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import fetchLogin from './fetchLogin';
 import { API_URL } from '../../config/info';
 
-function Accessible() {
+const Accessible = () => {
   const [state, setState] = useState(true);
 
   const handleAvailable = async () => {
@@ -30,6 +30,6 @@ function Accessible() {
       </span>
     </div>
   );
-}
+};
 
 export default Accessible;

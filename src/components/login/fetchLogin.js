@@ -1,4 +1,4 @@
-async function fetchLogin(url = '', data = {}) {
+const fetchLogin = async (url = '', data = {}) => {
   try {
     const response = await fetch(url, {
       method: 'POST',
@@ -17,6 +17,6 @@ async function fetchLogin(url = '', data = {}) {
     // console.error(error);
     return error;
   }
-}
+};
 
 export default fetchLogin;

@@ -17,7 +17,7 @@ import { getCities } from './app/city/citySlice';
 import { fetchRooms } from './components/Home/createSlice';
 import backendCheck from './helper/backend-check';
 
-function App() {
+const App = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const location = useLocation();
@@ -69,6 +69,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

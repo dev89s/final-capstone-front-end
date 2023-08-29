@@ -8,7 +8,7 @@ import { setUserInfo } from '../../app/user/userSlice';
 import './Login.css';
 import { API_URL } from '../../config/info';
 
-function Login() {
+const Login = () => {
   const dispatch = useDispatch();
   const [username, updateUsername] = useState('');
   const [loginState, setLoginState] = useState();
@@ -66,6 +66,6 @@ function Login() {
       </div>
     </div>
   );
-}
+};
 
 export default Login;

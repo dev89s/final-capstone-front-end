@@ -1,6 +1,6 @@
 import { API_URL } from '../../config/info';
 
-async function fetchRoomsApi(url = `${API_URL}/api/v1/rooms`) {
+const fetchRoomsApi = async (url = `${API_URL}/api/v1/rooms`) => {
   try {
     const response = await fetch(url, {
       method: 'GET',
@@ -15,6 +15,6 @@ async function fetchRoomsApi(url = `${API_URL}/api/v1/rooms`) {
     console.error(error);
     return error;
   }
-}
+};
 
 export default fetchRoomsApi;
