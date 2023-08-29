@@ -67,6 +67,17 @@
 
   /* margin: 20vh; */
 }
+.room-item h1{
+  color: #333;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 27px;
+}
+
+.room-item p{
+  padding: 0 4vw;
+  color: #222;
+  margin-top: -2vh;
+}
 
 .room-item img {
   width: 200px;
