@@ -35,13 +35,13 @@ const NavBar = () => {
       </div>
       <ul className={`nav ${open && 'open'}`}>
         <li className="logo">
-          <div className="content">
+          <Link to="/" className="content">
             <h2>
               SummerWave
               <br />
               Hotels
             </h2>
-          </div>
+          </Link>
         </li>
         <span className="links">
           <li className={`${params.pathname === '/' && 'active'}`}>
