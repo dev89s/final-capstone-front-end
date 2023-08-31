@@ -1,0 +1,89 @@
+.page-container {
+  background-image:
+    linear-gradient(
+      rgba(135, 206, 235, 0.5),
+      rgba(135, 206, 235, 0.5)
+    ),
+    url('/public/pexels-sergio-souza-1782151.jpg');
+
+  /* Update with your image URL */
+
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.heading-container {
+  background-color:
+    rgba(
+      255,
+      255,
+      255,
+      0.8
+    );
+
+  /* White color with transparency */
+
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.heading {
+  margin: 0;
+  font-size: 24px;
+}
+
+.reservations-container {
+  margin: 20px;
+  display: block;
+  width: 80%;
+  overflow-y: auto;
+  max-height: 75vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding-bottom: 0.8rem;
+}
+
+.reservation-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.no-reservation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.8rem;
+  height: 5vh;
+}
+
+.reservation-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.reservation-item td {
+  padding: 10px;
+  background-color: #e1eff1;
+  text-align: center;
+}
+
+.reservation-item th {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .heading-container {
+    margin-top: 3.5rem;
+  }
+}

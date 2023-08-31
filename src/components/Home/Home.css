@@ -1,0 +1,123 @@
+.homepage {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin-top: 2%;
+}
+
+.room-container {
+  display: flex;
+  width: calc(100vw - 19rem - 82.2px); /* Make sure the container takes full width */
+  max-width: 948px;
+  flex-wrap: nowrap; /* Prevent items from wrapping */
+  overflow: hidden; /* Hide the overflowing rooms */
+  transition: transform 0.5s ease; /* For smooth sliding effect */
+}
+
+@media screen and (max-width: 1280px) {
+  .room-container {
+    max-width: 632px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .room-container {
+    max-width: 316px;
+  }
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  margin-top: 14%;
+  align-items: center;
+}
+
+.room-control2 button {
+  height: 50px;
+  margin-top: 20vh;
+  font-weight: bold;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: greenyellow;
+  border-color: greenyellow;
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  padding-inline: 0.5rem;
+}
+
+.room-control1 button {
+  height: 50px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 20vh;
+  font-weight: bold;
+  background: greenyellow;
+  border-color: greenyellow;
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  padding-inline: 0.5rem;
+}
+
+.disabledButton {
+  background: gray !important;
+  border: none !important;
+}
+
+.room-item {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  margin-inline: 8px;
+  transition: transform 0.5s ease;
+  text-decoration: none;
+}
+
+.room-item h1 {
+  color: #333;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 27px;
+}
+
+.room-item p {
+  padding: 2vh 4vw;
+  color: #222;
+  margin-top: -2vh;
+}
+
+.room-item img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+@media (max-width: 600px) {
+  .homepage {
+    justify-content: center;
+  }
+
+  .room-item {
+    margin-right: 0; /* Remove margin for single room on smaller screens */
+  }
+
+  .room-control1,
+  .room-control2 {
+    display: none;
+  }
+
+  .room-container {
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    gap: 10px;
+  }
+}

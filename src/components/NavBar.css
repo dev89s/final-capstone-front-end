@@ -1,0 +1,121 @@
+.nav {
+  height: 96vh;
+  width: 11rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  padding: 2vh 2rem 2vh 2rem;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-left: 0.4rem;
+  width: 100%;
+}
+
+.content h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  font-size: 2.3em;
+  color: #e2c12b;
+  text-shadow: 1px 1px #000a;
+}
+
+.links {
+  padding-top: 1.8rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.links > li {
+  padding: 1.19rem;
+  white-space: nowrap;
+}
+
+.social {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.active {
+  font-weight: bold;
+  background: greenyellow;
+  color: white !important;
+  width: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.mobile {
+  display: none;
+  z-index: 10;
+}
+
+.ham-menu {
+  background: none;
+  border: none;
+}
+
+.social-logo {
+  height: 2rem;
+  width: 2rem;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    position: fixed;
+    background-color: white;
+    opacity: 0.95;
+    z-index: 99;
+  }
+
+  .mobile {
+    position: fixed;
+    top: 0;
+    left: 2rem;
+    display: inline;
+    z-index: 100;
+  }
+
+  .open {
+    display: none;
+  }
+
+  .ham-menu {
+    float: right;
+    padding-top: 2rem;
+  }
+
+  .close-btn {
+    position: absolute;
+    padding-left: 1rem;
+    top: 0;
+    left: 8rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: auto;
+    z-index: 100;
+  }
+
+  .close-btn:hover {
+    cursor: pointer;
+  }
+}
